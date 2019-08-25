@@ -10,13 +10,16 @@ from email.header import Header
 def sendTextEmail(sender: str, receivers: list, mailConf: tuple,
                   subject: str = 'no subject',
                   text: str = 'no text') -> bool:
-    '''
-    [send plain text email]
-    @param sender: sender email address
-    @param receivers: a list of receivers(str)
-    @param mailConf: (mailHost, mailUser, mailPassword)
-    @param subject: subject of this mail
-    @return: send successfully or not
+    '''[send plain text email]
+
+    Args:
+        sender: sender email address
+        receivers: a list of receivers(str)
+        mailConf: (mailHost, mailUser, mailPassword)
+        subject: subject of this mail
+    
+    Returns:
+        send successfully or not
     '''
 
     if len(mailConf) != 3:  # (host, user, password)
